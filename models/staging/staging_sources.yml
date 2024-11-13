@@ -6,13 +6,8 @@ sources:
   tables:
     - name: weather_daily_raw
 
-- name: staging_flights
+- name: staging_airports
   schema: public
   tables:
     - name: airports
     - name: regions
-
-- name: staging_flights_filtered_by_airports
-  schema: air_force
-  tables:
-    - name: flights_filtered_by_airports_raw
