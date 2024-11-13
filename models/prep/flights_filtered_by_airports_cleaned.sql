@@ -3,7 +3,7 @@ with flights_filtered_by_airports_raw as (
     from {{ref('staging_flights_filtered_by_airports_raw')}}),
 flights_filtered_by_airports_cleaned as(
     select
-        flight_date,
+        flight_date:: date as flight_date,
         TO_CHAR(dep_time, 'fm0000')::TIME AS dep_time,
         TO_CHAR(sched_dep_time , 'fm0000')::TIME AS sched_dep_time,
         (dep_delay * '1 minute'::INTERVAL) AS dep_delay_interval,
