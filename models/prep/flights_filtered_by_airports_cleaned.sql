@@ -8,7 +8,7 @@ flights_filtered_by_airports_cleaned as(
         TO_CHAR(sched_dep_time , 'fm0000')::TIME AS sched_dep_time,
         (dep_delay * '1 minute'::INTERVAL) AS dep_delay_interval,
         TO_CHAR(arr_time , 'fm0000')::TIME AS arr_time,
-        TO_CHAR(sched_arr_time , 'fm0000')::TIME AS dep_time,
+        TO_CHAR(sched_arr_time , 'fm0000')::TIME AS sched_arr_time,
         (arr_delay * '1 minute'::INTERVAL) AS arr_delay_interval,
         airline,
         tail_number,
