@@ -19,6 +19,6 @@ with flights_filtered_by_airports_cleaned as (
         (distance / 0.621371)::NUMERIC(6,2) AS distance_km,
         cancelled,
         diverted
-    from {{ref('flights_filtered_by_airports_raw')}})
+    from {{source('flights_filtered_by_airports_raw')}})
 select*
 from flights_filtered_by_airports_cleaned;
