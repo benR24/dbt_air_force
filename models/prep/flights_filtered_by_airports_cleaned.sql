@@ -1,4 +1,7 @@
-with flights_filtered_by_airports_cleaned as (
+with flights_filtered_by_airports_raw as (
+    select*
+    from {{ref('flights_filtered_by_airports_raw')}}),
+flights_filtered_by_airports_cleaned as(
     select
         flight_date,
         TO_CHAR(dep_time, 'fm0000')::TIME AS dep_time,
@@ -19,6 +22,6 @@ with flights_filtered_by_airports_cleaned as (
         (distance / 0.621371)::NUMERIC(6,2) AS distance_km,
         cancelled,
         diverted
-    from {{source('flights_filtered_by_airports_cleaned','flights_filtered_by_airports_raw')}})
+    from flights_filtered_by_airports_raw)
 select*
 from flights_filtered_by_airports_cleaned
