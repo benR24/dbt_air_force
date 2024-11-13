@@ -12,3 +12,8 @@ sources:
     - name: flights
     - name: airports
     - name: regions
+
+- name: staging_flights_filtered_by_airports_raw
+  schema: air_force
+  tables:
+    - name: flights_filtered_by_airports_raw
