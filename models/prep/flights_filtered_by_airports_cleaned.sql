@@ -1,6 +1,6 @@
 with flights_filtered_by_airports_raw as (
     select*
-    from {{ref('flights_filtered_by_airports_raw')}}),
+    from {{ref('staging_flights_filtered_by_airports_raw')}}),
 flights_filtered_by_airports_cleaned as(
     select
         flight_date,
