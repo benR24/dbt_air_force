@@ -6,8 +6,9 @@ sources:
   tables:
     - name: weather_daily_raw
 
-- name: staging_airports
+- name: staging_flights
   schema: public
   tables:
+    - name: flights
     - name: airports
     - name: regions
