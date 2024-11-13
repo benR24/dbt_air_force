@@ -11,6 +11,7 @@ sources:
   tables:
     - name: airports
     - name: regions
+    
 - name: staging_flights_filtered_by_airports
   schema: public
   tables:
