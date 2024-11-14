@@ -12,4 +12,4 @@ flights_weather_joined as(
     and fc.flight_date = wd.date
     order by flight_date asc))
 select*
-from flights_weather_joined;
+from flights_weather_joined
